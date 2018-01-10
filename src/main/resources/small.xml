@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:FeatureCollection xmlns:fme="http://www.safe.com/gml/fme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					   xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml">
+	<gml:boundedBy>
+		<gml:Envelope srsName="EPSG:25832" srsDimension="2">
+			<gml:lowerCorner>548628.94 5917302.258</gml:lowerCorner>
+			<gml:upperCorner>587114.138 5953531.734</gml:upperCorner>
+		</gml:Envelope>
+	</gml:boundedBy>
+	<gml:featureMember>
+		<fme:strassenbaumkataster_Point gml:id="APP_STRASSENBAUMKATASTER_14031">
+			<fme:OBJECTID>222644</fme:OBJECTID>
+			<fme:gml_parent_id/>
+			<fme:baumid>100065631</fme:baumid>
+			<fme:gattung>Ulmus / Ulme</fme:gattung>
+			<fme:gattung_latein>Ulmus / Ulme</fme:gattung_latein>
+			<fme:gattung_deutsch>Ulme</fme:gattung_deutsch>
+			<fme:art>Ulmus spec. / Ulme</fme:art>
+			<fme:art_latein>Ulmus spec. / Ulme</fme:art_latein>
+			<fme:art_deutsch>Ulme</fme:art_deutsch>
+			<fme:pflanzjahr>2006</fme:pflanzjahr>
+			<fme:kronendurchmesser>4</fme:kronendurchmesser>
+			<fme:kronendmzahl>4 m</fme:kronendmzahl>
+			<fme:stammumfang>25</fme:stammumfang>
+			<fme:stammumfangzahl>25 cm</fme:stammumfangzahl>
+			<fme:strasse>Billstraße</fme:strasse>
+			<fme:hausnummer>186</fme:hausnummer>
+			<fme:ortsteil_nr>132</fme:ortsteil_nr>
+			<fme:stand_bearbeitung>20150101</fme:stand_bearbeitung>
+			<fme:bezirk>Hamburg-Mitte</fme:bezirk>
+			<fme:geom/>
+			<gml:pointProperty>
+				<gml:Point srsName="EPSG:25832" srsDimension="2">
+					<gml:pos>570127.307 5932399.233</gml:pos>
+				</gml:Point>
+			</gml:pointProperty>
+		</fme:strassenbaumkataster_Point>
+	</gml:featureMember>
+	<gml:featureMember>
+		<fme:strassenbaumkataster_Point gml:id="APP_STRASSENBAUMKATASTER_10714">
+			<fme:OBJECTID>222643</fme:OBJECTID>
+			<fme:gml_parent_id/>
+			<fme:baumid>100009389</fme:baumid>
+			<fme:gattung>Tilia / Linde</fme:gattung>
+			<fme:gattung_latein>Tilia / Linde</fme:gattung_latein>
+			<fme:gattung_deutsch>Linde</fme:gattung_deutsch>
+			<fme:art>Tilia vulgaris 'Pallida' / Kaiser-Linde</fme:art>
+			<fme:art_latein>Tilia vulgaris 'Pallida' / Kaiser-Linde</fme:art_latein>
+			<fme:art_deutsch>Kaiser-Linde</fme:art_deutsch>
+			<fme:pflanzjahr>1993</fme:pflanzjahr>
+			<fme:kronendurchmesser>5</fme:kronendurchmesser>
+			<fme:kronendmzahl>5 m</fme:kronendmzahl>
+			<fme:stammumfang>75</fme:stammumfang>
+			<fme:stammumfangzahl>75 cm</fme:stammumfangzahl>
+			<fme:strasse>Wilhelmsburger Platz</fme:strasse>
+			<fme:hausnummer>0</fme:hausnummer>
+			<fme:ortsteil_nr>134</fme:ortsteil_nr>
+			<fme:stand_bearbeitung>20150101</fme:stand_bearbeitung>
+			<fme:bezirk>Hamburg-Mitte</fme:bezirk>
+			<fme:geom/>
+			<gml:pointProperty>
+				<gml:Point srsName="EPSG:25832" srsDimension="2">
+					<gml:pos>567279.14 5930902.37</gml:pos>
+				</gml:Point>
+			</gml:pointProperty>
+		</fme:strassenbaumkataster_Point>
+	</gml:featureMember>
+	<gml:featureMember>
+		<fme:strassenbaumkataster_Point gml:id="APP_STRASSENBAUMKATASTER_10713">
+			<fme:OBJECTID>222642</fme:OBJECTID>
+			<fme:gml_parent_id/>
+			<fme:baumid>100009390</fme:baumid>
+			<fme:gattung>Tilia / Linde</fme:gattung>
+			<fme:gattung_latein>Tilia / Linde</fme:gattung_latein>
+			<fme:gattung_deutsch>Linde</fme:gattung_deutsch>
+			<fme:art>Tilia vulgaris 'Pallida' / Kaiser-Linde</fme:art>
+			<fme:art_latein>Tilia vulgaris 'Pallida' / Kaiser-Linde</fme:art_latein>
+			<fme:art_deutsch>Kaiser-Linde</fme:art_deutsch>
+			<fme:pflanzjahr>1993</fme:pflanzjahr>
+			<fme:kronendurchmesser>5</fme:kronendurchmesser>
+			<fme:kronendmzahl>5 m</fme:kronendmzahl>
+			<fme:stammumfang>65</fme:stammumfang>
+			<fme:stammumfangzahl>65 cm</fme:stammumfangzahl>
+			<fme:strasse>Wilhelmsburger Platz</fme:strasse>
+			<fme:hausnummer>0</fme:hausnummer>
+			<fme:ortsteil_nr>134</fme:ortsteil_nr>
+			<fme:stand_bearbeitung>20150101</fme:stand_bearbeitung>
+			<fme:bezirk>Hamburg-Mitte</fme:bezirk>
+			<fme:geom/>
+			<gml:pointProperty>
+				<gml:Point srsName="EPSG:25832" srsDimension="2">
+					<gml:pos>567279.44 5930894.573</gml:pos>
+				</gml:Point>
+			</gml:pointProperty>
+		</fme:strassenbaumkataster_Point>
+	</gml:featureMember>
+	<gml:featureMember>
+		<fme:strassenbaumkataster_Point gml:id="APP_STRASSENBAUMKATASTER_10712">
+			<fme:OBJECTID>222641</fme:OBJECTID>
+			<fme:gml_parent_id/>
+			<fme:baumid>100009391</fme:baumid>
+			<fme:gattung>Tilia / Linde</fme:gattung>
+			<fme:gattung_latein>Tilia / Linde</fme:gattung_latein>
+			<fme:gattung_deutsch>Linde</fme:gattung_deutsch>
+			<fme:art>Tilia vulgaris 'Pallida' / Kaiser-Linde</fme:art>
+			<fme:art_latein>Tilia vulgaris 'Pallida' / Kaiser-Linde</fme:art_latein>
+			<fme:art_deutsch>Kaiser-Linde</fme:art_deutsch>
+			<fme:pflanzjahr>1993</fme:pflanzjahr>
+			<fme:kronendurchmesser>5</fme:kronendurchmesser>
+			<fme:kronendmzahl>5 m</fme:kronendmzahl>
+			<fme:stammumfang>73</fme:stammumfang>
+			<fme:stammumfangzahl>73 cm</fme:stammumfangzahl>
+			<fme:strasse>Wilhelmsburger Platz</fme:strasse>
+			<fme:hausnummer>0</fme:hausnummer>
+			<fme:ortsteil_nr>134</fme:ortsteil_nr>
+			<fme:stand_bearbeitung>20150101</fme:stand_bearbeitung>
+			<fme:bezirk>Hamburg-Mitte</fme:bezirk>
+			<fme:geom/>
+			<gml:pointProperty>
+				<gml:Point srsName="EPSG:25832" srsDimension="2">
+					<gml:pos>567275.441 5930886.677</gml:pos>
+				</gml:Point>
+			</gml:pointProperty>
+		</fme:strassenbaumkataster_Point>
+	</gml:featureMember>
+	<gml:featureMember>
+		<fme:strassenbaumkataster_Point gml:id="APP_STRASSENBAUMKATASTER_10711">
+			<fme:OBJECTID>222640</fme:OBJECTID>
+			<fme:gml_parent_id/>
+			<fme:baumid>100009392</fme:baumid>
+			<fme:gattung>Tilia / Linde</fme:gattung>
+			<fme:gattung_latein>Tilia / Linde</fme:gattung_latein>
+			<fme:gattung_deutsch>Linde</fme:gattung_deutsch>
+			<fme:art>Tilia vulgaris 'Pallida' / Kaiser-Linde</fme:art>
+			<fme:art_latein>Tilia vulgaris 'Pallida' / Kaiser-Linde</fme:art_latein>
+			<fme:art_deutsch>Kaiser-Linde</fme:art_deutsch>
+			<fme:pflanzjahr>1993</fme:pflanzjahr>
+			<fme:kronendurchmesser>6</fme:kronendurchmesser>
+			<fme:kronendmzahl>6 m</fme:kronendmzahl>
+			<fme:stammumfang>75</fme:stammumfang>
+			<fme:stammumfangzahl>75 cm</fme:stammumfangzahl>
+			<fme:strasse>Wilhelmsburger Platz</fme:strasse>
+			<fme:hausnummer>0</fme:hausnummer>
+			<fme:ortsteil_nr>134</fme:ortsteil_nr>
+			<fme:stand_bearbeitung>20150101</fme:stand_bearbeitung>
+			<fme:bezirk>Hamburg-Mitte</fme:bezirk>
+			<fme:geom/>
+			<gml:pointProperty>
+				<gml:Point srsName="EPSG:25832" srsDimension="2">
+					<gml:pos>567275.741 5930879.08</gml:pos>
+				</gml:Point>
+			</gml:pointProperty>
+		</fme:strassenbaumkataster_Point>
+	</gml:featureMember>
+	<gml:featureMember>
+		<fme:strassenbaumkataster_Point gml:id="APP_STRASSENBAUMKATASTER_10710">
+			<fme:OBJECTID>222639</fme:OBJECTID>
+			<fme:gml_parent_id/>
+			<fme:baumid>100048852</fme:baumid>
+			<fme:gattung>Acer / Ahorn</fme:gattung>
+			<fme:gattung_latein>Acer / Ahorn</fme:gattung_latein>
+			<fme:gattung_deutsch>Ahorn</fme:gattung_deutsch>
+			<fme:art>Acer pseudoplatanus / Berg-Ahorn, Wald-Ahorn</fme:art>
+			<fme:art_latein>Acer pseudoplatanus / Berg-Ahorn, Wald-Ahorn</fme:art_latein>
+			<fme:art_deutsch>Berg-Ahorn, Wald-Ahorn</fme:art_deutsch>
+			<fme:pflanzjahr>1985</fme:pflanzjahr>
+			<fme:kronendurchmesser>12</fme:kronendurchmesser>
+			<fme:kronendmzahl>12 m</fme:kronendmzahl>
+			<fme:stammumfang>110</fme:stammumfang>
+			<fme:stammumfangzahl>110 cm</fme:stammumfangzahl>
+			<fme:strasse>Wilhelmsburger Platz</fme:strasse>
+			<fme:hausnummer>0</fme:hausnummer>
+			<fme:ortsteil_nr>134</fme:ortsteil_nr>
+			<fme:stand_bearbeitung>20150101</fme:stand_bearbeitung>
+			<fme:bezirk>Hamburg-Mitte</fme:bezirk>
+			<fme:geom/>
+			<gml:pointProperty>
+				<gml:Point srsName="EPSG:25832" srsDimension="2">
+					<gml:pos>567315.016 5930879.348</gml:pos>
+				</gml:Point>
+			</gml:pointProperty>
+		</fme:strassenbaumkataster_Point>
+	</gml:featureMember>
+	<gml:featureMember>
+		<fme:strassenbaumkataster_Point gml:id="APP_STRASSENBAUMKATASTER_10709">
+			<fme:OBJECTID>222638</fme:OBJECTID>
+			<fme:gml_parent_id/>
+			<fme:baumid>100048853</fme:baumid>
+			<fme:gattung>Acer / Ahorn</fme:gattung>
+			<fme:gattung_latein>Acer / Ahorn</fme:gattung_latein>
+			<fme:gattung_deutsch>Ahorn</fme:gattung_deutsch>
+			<fme:art>Acer pseudoplatanus / Berg-Ahorn, Wald-Ahorn</fme:art>
+			<fme:art_latein>Acer pseudoplatanus / Berg-Ahorn, Wald-Ahorn</fme:art_latein>
+			<fme:art_deutsch>Berg-Ahorn, Wald-Ahorn</fme:art_deutsch>
+			<fme:pflanzjahr>1985</fme:pflanzjahr>
+			<fme:kronendurchmesser>11</fme:kronendurchmesser>
+			<fme:kronendmzahl>11 m</fme:kronendmzahl>
+			<fme:stammumfang>162</fme:stammumfang>
+			<fme:stammumfangzahl>162 cm</fme:stammumfangzahl>
+			<fme:strasse>Wilhelmsburger Platz</fme:strasse>
+			<fme:hausnummer>0</fme:hausnummer>
+			<fme:ortsteil_nr>134</fme:ortsteil_nr>
+			<fme:stand_bearbeitung>20150101</fme:stand_bearbeitung>
+			<fme:bezirk>Hamburg-Mitte</fme:bezirk>
+			<fme:geom/>
+			<gml:pointProperty>
+				<gml:Point srsName="EPSG:25832" srsDimension="2">
+					<gml:pos>567317.855 5930879.908</gml:pos>
+				</gml:Point>
+			</gml:pointProperty>
+		</fme:strassenbaumkataster_Point>
+	</gml:featureMember>
+	<gml:featureMember>
+		<fme:strassenbaumkataster_Point gml:id="APP_STRASSENBAUMKATASTER_10708">
+			<fme:OBJECTID>222637</fme:OBJECTID>
+			<fme:gml_parent_id/>
+			<fme:baumid>100048854</fme:baumid>
+			<fme:gattung>Acer / Ahorn</fme:gattung>
+			<fme:gattung_latein>Acer / Ahorn</fme:gattung_latein>
+			<fme:gattung_deutsch>Ahorn</fme:gattung_deutsch>
+			<fme:art>Acer campestre / Feld-Ahorn, Hecken-Ahorn</fme:art>
+			<fme:art_latein>Acer campestre / Feld-Ahorn, Hecken-Ahorn</fme:art_latein>
+			<fme:art_deutsch>Feld-Ahorn, Hecken-Ahorn</fme:art_deutsch>
+			<fme:pflanzjahr>1975</fme:pflanzjahr>
+			<fme:kronendurchmesser>7</fme:kronendurchmesser>
+			<fme:kronendmzahl>7 m</fme:kronendmzahl>
+			<fme:stammumfang>115</fme:stammumfang>
+			<fme:stammumfangzahl>115 cm</fme:stammumfangzahl>
+			<fme:strasse>Wilhelmsburger Platz</fme:strasse>
+			<fme:hausnummer>0</fme:hausnummer>
+			<fme:ortsteil_nr>134</fme:ortsteil_nr>
+			<fme:stand_bearbeitung>20150101</fme:stand_bearbeitung>
+			<fme:bezirk>Hamburg-Mitte</fme:bezirk>
+			<fme:geom/>
+			<gml:pointProperty>
+				<gml:Point srsName="EPSG:25832" srsDimension="2">
+					<gml:pos>567320.544 5930879.428</gml:pos>
+				</gml:Point>
+			</gml:pointProperty>
+		</fme:strassenbaumkataster_Point>
+	</gml:featureMember>
+</gml:FeatureCollection>

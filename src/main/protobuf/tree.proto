@@ -1,0 +1,36 @@
+syntax = "proto2";
+
+package tutorial;
+
+option java_package = "com.example.tutorial";
+option java_outer_classname = "HamburgStreetTreeProtos";
+
+message HamburgStreetTreeDatabase {
+    repeated HamburgStreetTree trees = 1;
+}
+
+message HamburgStreetTree {
+    required string gmlId = 1;
+    required string objectId = 2;
+    required int32 baumId = 3;
+    required string gattung = 4;
+    required string gattungLatein = 5;
+    required string gattungDeutsch = 6;
+    required string art = 7;
+    required string artLatein = 8;
+    required string artDeutsch = 9;
+    required int32 pflanzjahr = 10;
+    required string kronendurchmesser = 11;
+    required string kronendmzahl = 12;
+    required int32 stammumfang = 13;
+    required string stammumfangzahl = 14;
+    required string strasse = 15;
+    required string hausnummer = 16;
+    required int32 ortsteil_nr = 17;
+    required int64 stand_bearbeitung = 18;
+    required string bezirk = 19;
+    required string srsName = 20;
+    required string srsDimension = 21;
+    required string pos = 22;
+
+}
