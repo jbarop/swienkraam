@@ -50,30 +50,54 @@ public class HamburgStreetTreeProtobufImpl extends HamburgStreetTree {
                                          final String pos) {
 
 
-        HamburgStreetTreeProtos.HamburgStreetTree build = HamburgStreetTreeProtos.HamburgStreetTree.newBuilder()
+        HamburgStreetTreeProtos.HamburgStreetTree.Builder builder = HamburgStreetTreeProtos.HamburgStreetTree.newBuilder()
                 .setGmlId(gmlId)
                 .setObjectId(objectId)
                 .setBaumId(baumId)
-                .setGattung(gattung)
-                .setGattungLatein(gattungLatein)
-                .setGattungDeutsch(gattungDeutsch)
-                .setArt(art)
-                .setArtLatein(artLatein)
-                .setArtDeutsch(artDeutsch)
                 .setPflanzjahr(pflanzjahr)
                 .setKronendurchmesser(kronendurchmesser)
                 .setKronendmzahl(kronendmzahl)
                 .setStammumfang(stammumfang)
                 .setStammumfangzahl(stammumfangzahl)
-                .setStrasse(strasse)
-                .setHausnummer(hausnummer)
                 .setOrtsteilNr(ortsteilNr)
                 .setStandBearbeitung(standBearbeitung.atStartOfDay().toInstant(ZoneOffset.UTC).getEpochSecond())
                 .setBezirk(bezirk)
                 .setSrsName(srsName)
                 .setSrsDimension(srsDimension)
-                .setPos(pos)
-                .build();
+                .setPos(pos);
+
+        if (gattung != null) {
+            builder.setGattung(gattung);
+        }
+
+        if (gattungLatein != null) {
+            builder.setGattungLatein(gattungLatein);
+        }
+
+        if (gattungDeutsch != null) {
+            builder.setGattungDeutsch(gattungDeutsch);
+        }
+
+        if (art != null) {
+            builder.setArt(art);
+        }
+
+        if (artLatein != null) {
+            builder.setArtLatein(artLatein);
+        }
+
+        if (artDeutsch != null) {
+            builder.setArtDeutsch(artDeutsch);
+        }
+
+        if (strasse != null) {
+            builder.setStrasse(strasse);
+        }
+        if (hausnummer != null) {
+            builder.setHausnummer(hausnummer);
+        }
+
+        HamburgStreetTreeProtos.HamburgStreetTree build = builder.build();
 
         this.storage = build.toByteArray();
     }

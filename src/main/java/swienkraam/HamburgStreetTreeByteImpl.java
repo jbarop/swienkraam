@@ -18,7 +18,7 @@ public class HamburgStreetTreeByteImpl extends HamburgStreetTree {
     private static final DateTimeFormatter LOCALDATE_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMdd");
 
     private static final int NUM_DYNAMICS = 17;
-    private static final int POS_INDEX = 18;
+    private static final int POS_INDEX = 21;
 
     private final byte[] storage;
 
@@ -48,27 +48,29 @@ public class HamburgStreetTreeByteImpl extends HamburgStreetTree {
                                      final String srsName,
                                      final String srsDimension,
                                      final String pos) {
+        final byte[] emptyBytes = new byte[0];
 
-        final byte[] gmlIdBytes = gmlId.getBytes(CHARSET);
-        final byte[] objectIdBytes = objectId.getBytes(CHARSET);
-        final byte[] gattungBytes = gattung.getBytes(CHARSET);
-        final byte[] gattungLateinBytes = gattungLatein.getBytes(CHARSET);
-        final byte[] gattungDeutschBytes = gattungDeutsch.getBytes(CHARSET);
-        final byte[] artBytes = art.getBytes(CHARSET);
-        final byte[] artLateinBytes = artLatein.getBytes(CHARSET);
-        final byte[] artDeutschBytes = artDeutsch.getBytes(CHARSET);
-        final byte[] kronendurchmesserBytes = kronendurchmesser.getBytes(CHARSET);
-        final byte[] kronendmzahlBytes = kronendmzahl.getBytes(CHARSET);
-        final byte[] stammumfangzahlBytes = stammumfangzahl.getBytes(CHARSET);
-        final byte[] strasseBytes = strasse.getBytes(CHARSET);
-        final byte[] hausnummerBytes = hausnummer.getBytes(CHARSET);
-        final byte[] bezirkBytes = bezirk.getBytes(CHARSET);
-        final byte[] srsNamekBytes = srsName.getBytes(CHARSET);
-        final byte[] srsDimensionBytes = srsDimension.getBytes(CHARSET);
-        final byte[] posBytes = pos.getBytes(CHARSET);
+        final byte[] gmlIdBytes = gmlId != null ? gmlId.getBytes(CHARSET) : emptyBytes;
+        final byte[] objectIdBytes = objectId != null ? objectId.getBytes(CHARSET) : emptyBytes;
+        final byte[] gattungBytes = gattung != null ? gattung.getBytes(CHARSET) : emptyBytes;
+        final byte[] gattungLateinBytes = gattungLatein != null ? gattungLatein.getBytes(CHARSET) : emptyBytes;
+        final byte[] gattungDeutschBytes = gattungDeutsch != null ? gattungDeutsch.getBytes(CHARSET) : emptyBytes;
+        final byte[] artBytes = art != null ? art.getBytes(CHARSET) : emptyBytes;
+        final byte[] artLateinBytes = artLatein != null ? artLatein.getBytes(CHARSET) : emptyBytes;
+        final byte[] artDeutschBytes = artDeutsch != null ? artDeutsch.getBytes(CHARSET) : emptyBytes;
+        final byte[] kronendurchmesserBytes = kronendurchmesser != null ? kronendurchmesser.getBytes(CHARSET) : emptyBytes;
+        final byte[] kronendmzahlBytes = kronendmzahl != null ? kronendmzahl.getBytes(CHARSET) : emptyBytes;
+        final byte[] stammumfangzahlBytes = stammumfangzahl != null ? stammumfangzahl.getBytes(CHARSET) : emptyBytes;
+        final byte[] strasseBytes = strasse != null ? strasse.getBytes(CHARSET) : emptyBytes;
+        final byte[] hausnummerBytes = hausnummer != null ? hausnummer.getBytes(CHARSET) : emptyBytes;
+        final byte[] bezirkBytes = bezirk != null ? bezirk.getBytes(CHARSET) : emptyBytes;
+        final byte[] srsNamekBytes = srsName != null ? srsName.getBytes(CHARSET) : emptyBytes;
+        final byte[] srsDimensionBytes = srsDimension != null ? srsDimension.getBytes(CHARSET) : emptyBytes;
+        final byte[] posBytes = pos != null ? pos.getBytes(CHARSET) : emptyBytes;
 
         final byte[] storage = new byte[
-                4 // int baumId
+                3 // nullable bitfield
+                        + 4 // int baumId
                         + 4 // int pflanzjahr
                         + 4 // int stammumfang
                         + 2 // short ortsteilNr
@@ -93,29 +95,29 @@ public class HamburgStreetTreeByteImpl extends HamburgStreetTree {
                         + posBytes.length // String pos
                 ];
 
-        storeInt(storage, 0, baumId);
-        storeInt(storage, 4, pflanzjahr);
-        storeInt(storage, 8, stammumfang);
-        storeShort(storage, 12, ortsteilNr);
-        storeLocalDate(storage, 14, standBearbeitung);
+        storeInt(storage, 3, baumId);
+        storeInt(storage, 7, pflanzjahr);
+        storeInt(storage, 11, stammumfang);
+        storeShort(storage, 15, ortsteilNr);
+        storeLocalDate(storage, 0, (byte) 0x01, 17, standBearbeitung);
 
-        storeBytes(storage, 0, gmlIdBytes);
-        storeBytes(storage, 1, objectIdBytes);
-        storeBytes(storage, 2, gattungBytes);
-        storeBytes(storage, 3, gattungLateinBytes);
-        storeBytes(storage, 4, gattungDeutschBytes);
-        storeBytes(storage, 5, artBytes);
-        storeBytes(storage, 6, artLateinBytes);
-        storeBytes(storage, 7, artDeutschBytes);
-        storeBytes(storage, 8, kronendurchmesserBytes);
-        storeBytes(storage, 9, kronendmzahlBytes);
-        storeBytes(storage, 10, stammumfangzahlBytes);
-        storeBytes(storage, 11, strasseBytes);
-        storeBytes(storage, 12, hausnummerBytes);
-        storeBytes(storage, 13, bezirkBytes);
-        storeBytes(storage, 14, srsNamekBytes);
-        storeBytes(storage, 15, srsDimensionBytes);
-        storeBytes(storage, 16, posBytes);
+        storeBytes(storage, 0, (byte) 0x02, 0, gmlIdBytes, gmlId);
+        storeBytes(storage, 0, (byte) 0x04, 1, objectIdBytes, objectId);
+        storeBytes(storage, 0, (byte) 0x08, 2, gattungBytes, gattung);
+        storeBytes(storage, 0, (byte) 0x10, 3, gattungLateinBytes, gattungLatein);
+        storeBytes(storage, 0, (byte) 0x20, 4, gattungDeutschBytes, gattungDeutsch);
+        storeBytes(storage, 0, (byte) 0x40, 5, artBytes, art);
+        storeBytes(storage, 0, (byte) 0x80, 6, artLateinBytes, artLatein);
+        storeBytes(storage, 1, (byte) 0x01, 7, artDeutschBytes, artDeutsch);
+        storeBytes(storage, 1, (byte) 0x02, 8, kronendurchmesserBytes, kronendurchmesser);
+        storeBytes(storage, 1, (byte) 0x04, 9, kronendmzahlBytes, kronendmzahl);
+        storeBytes(storage, 1, (byte) 0x08, 10, stammumfangzahlBytes, stammumfangzahl);
+        storeBytes(storage, 1, (byte) 0x10, 11, strasseBytes, strasse);
+        storeBytes(storage, 1, (byte) 0x20, 12, hausnummerBytes, hausnummer);
+        storeBytes(storage, 1, (byte) 0x40, 13, bezirkBytes, bezirk);
+        storeBytes(storage, 1, (byte) 0x80, 14, srsNamekBytes, srsName);
+        storeBytes(storage, 2, (byte) 0x01, 15, srsDimensionBytes, srsDimension);
+        storeBytes(storage, 2, (byte) 0x02, 16, posBytes, pos);
 
         this.storage = preSave(storage);
     }
@@ -123,128 +125,128 @@ public class HamburgStreetTreeByteImpl extends HamburgStreetTree {
     @Override
     public String getGmlId() {
         byte[] storage = retrieve();
-        return loadString(storage, POS_INDEX + NUM_DYNAMICS * 2, loadIndex(storage, 0));
+        return loadString(storage, 0, (byte) 0x02, POS_INDEX + NUM_DYNAMICS * 2, loadIndex(storage, 0));
     }
 
     @Override
     public String getObjectId() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 0), loadIndex(storage, 1));
+        return loadString(storage, 0, (byte) 0x04, loadIndex(storage, 0), loadIndex(storage, 1));
     }
 
     @Override
     public int getBaumId() {
-        return loadInt(retrieve(), 0);
+        return loadInt(retrieve(), 3);
     }
 
     @Override
     public String getGattung() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 1), loadIndex(storage, 2));
+        return loadString(storage, 0, (byte) 0x08, loadIndex(storage, 1), loadIndex(storage, 2));
     }
 
     @Override
     public String getGattungLatein() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 2), loadIndex(storage, 3));
+        return loadString(storage, 0, (byte) 0x10, loadIndex(storage, 2), loadIndex(storage, 3));
     }
 
     @Override
     public String getGattungDeutsch() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 3), loadIndex(storage, 4));
+        return loadString(storage, 0, (byte) 0x20, loadIndex(storage, 3), loadIndex(storage, 4));
     }
 
     @Override
     public String getArt() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 4), loadIndex(storage, 5));
+        return loadString(storage, 0, (byte) 0x40, loadIndex(storage, 4), loadIndex(storage, 5));
     }
 
     @Override
     public String getArtLatein() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 5), loadIndex(storage, 6));
+        return loadString(storage, 0, (byte) 0x80, loadIndex(storage, 5), loadIndex(storage, 6));
     }
 
     @Override
     public String getArtDeutsch() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 6), loadIndex(storage, 7));
+        return loadString(storage, 1, (byte) 0x01, loadIndex(storage, 6), loadIndex(storage, 7));
     }
 
     @Override
     public int getPflanzjahr() {
-        return loadInt(retrieve(), 4);
+        return loadInt(retrieve(), 7);
     }
 
     @Override
     public String getKronendurchmesser() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 7), loadIndex(storage, 8));
+        return loadString(storage, 1, (byte) 0x02, loadIndex(storage, 7), loadIndex(storage, 8));
     }
 
     @Override
     public String getKronendmzahl() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 8), loadIndex(storage, 9));
+        return loadString(storage, 1, (byte) 0x04, loadIndex(storage, 8), loadIndex(storage, 9));
     }
 
     @Override
     public int getStammumfang() {
-        return loadInt(retrieve(), 8);
+        return loadInt(retrieve(), 11);
     }
 
     @Override
     public String getStammumfangzahl() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 9), loadIndex(storage, 10));
+        return loadString(storage, 1, (byte) 0x08, loadIndex(storage, 9), loadIndex(storage, 10));
     }
 
     @Override
     public String getStrasse() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 10), loadIndex(storage, 11));
+        return loadString(storage, 1, (byte) 0x10, loadIndex(storage, 10), loadIndex(storage, 11));
     }
 
     @Override
     public String getHausnummer() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 11), loadIndex(storage, 12));
+        return loadString(storage, 1, (byte) 0x20, loadIndex(storage, 11), loadIndex(storage, 12));
     }
 
     @Override
     public short getOrtsteilNr() {
-        return loadShort(retrieve(), 12);
+        return loadShort(retrieve(), 15);
     }
 
     @Override
     public LocalDate getStandBearbeitung() {
-        return loadLocalDate(retrieve(), 14);
+        return loadLocalDate(retrieve(), 0, (byte) 0x01, 17);
     }
 
     @Override
     public String getBezirk() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 12), loadIndex(storage, 13));
+        return loadString(storage, 1, (byte) 0x40, loadIndex(storage, 12), loadIndex(storage, 13));
     }
 
     @Override
     public String getSrsName() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 13), loadIndex(storage, 14));
+        return loadString(storage, 1, (byte) 0x80, loadIndex(storage, 13), loadIndex(storage, 14));
     }
 
     @Override
     public String getSrsDimension() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 14), loadIndex(storage, 15));
+        return loadString(storage, 2, (byte) 0x01, loadIndex(storage, 14), loadIndex(storage, 15));
     }
 
     @Override
     public String getPos() {
         byte[] storage = retrieve();
-        return loadString(storage, loadIndex(storage, 15), loadIndex(storage, 16));
+        return loadString(storage, 2, (byte) 0x02, loadIndex(storage, 15), loadIndex(storage, 16));
     }
 
     protected byte[] preSave(final byte[] storage) {
@@ -267,12 +269,17 @@ public class HamburgStreetTreeByteImpl extends HamburgStreetTree {
         storage[position + 1] = (byte) value;
     }
 
-    private static void storeLocalDate(final byte[] storage, final int position, final LocalDate value) {
-        // Instead of storing the timestamp as long (8 bytes) the date is stored as int ("yyymmdd", 4 bytes)
-        storeInt(storage, position, Integer.valueOf(value.format(LOCALDATE_FORMATTER)));
+    private static void storeLocalDate(final byte[] storage, final int bitmaskIndex, final byte bitmaskValue,
+                                       final int position, final LocalDate value) {
+        if (value != null) {
+            storage[bitmaskIndex] |= bitmaskValue;
+            // Instead of storing the timestamp as long (8 bytes) the date is stored as int ("yyymmdd", 4 bytes)
+            storeInt(storage, position, Integer.valueOf(value.format(LOCALDATE_FORMATTER)));
+        }
     }
 
-    private static void storeBytes(final byte[] storage, final int dynamicIndex, final byte[] data) {
+    private static void storeBytes(final byte[] storage, final int bitmaskIndex, final byte bitmaskValue,
+                                   final int dynamicIndex, final byte[] data, final String originalObject) {
         final short storageOffset;
         if (dynamicIndex == 0) {
             storageOffset = POS_INDEX + NUM_DYNAMICS * 2;
@@ -280,7 +287,10 @@ public class HamburgStreetTreeByteImpl extends HamburgStreetTree {
             storageOffset = loadIndex(storage, dynamicIndex - 1);
         }
 
-        arraycopy(data, 0, storage, storageOffset, data.length);
+        if (originalObject != null) {
+            storage[bitmaskIndex] |= bitmaskValue;
+            arraycopy(data, 0, storage, storageOffset, data.length);
+        }
         storeShort(storage, dynamicIndex * 2 + POS_INDEX, (short) (storageOffset + data.length));
     }
 
@@ -296,8 +306,13 @@ public class HamburgStreetTreeByteImpl extends HamburgStreetTree {
         return seek(storage, position).getShort();
     }
 
-    private static LocalDate loadLocalDate(final byte[] storage, final int position) {
-        return LocalDate.parse(String.valueOf(loadInt(storage, position)), LOCALDATE_FORMATTER);
+    private static LocalDate loadLocalDate(final byte[] storage, final int bitmaskIndex, final byte bitmaskValue,
+                                           final int position) {
+        if ((storage[bitmaskIndex] & bitmaskValue) == bitmaskValue) {
+            return LocalDate.parse(String.valueOf(loadInt(storage, position)), LOCALDATE_FORMATTER);
+        } else {
+            return null;
+        }
     }
 
     private static short loadIndex(final byte[] storage, final int position) {
@@ -311,8 +326,13 @@ public class HamburgStreetTreeByteImpl extends HamburgStreetTree {
         return array;
     }
 
-    private static String loadString(final byte[] storage, final int startPosition, final int endPosition) {
-        return new String(loadBytes(storage, startPosition, endPosition), CHARSET);
+    private static String loadString(final byte[] storage, final int bitmaskIndex, final byte bitmaskValue,
+                                     final int startPosition, final int endPosition) {
+        if ((storage[bitmaskIndex] & bitmaskValue) == bitmaskValue) {
+            return new String(loadBytes(storage, startPosition, endPosition), CHARSET);
+        } else {
+            return null;
+        }
     }
 
 }

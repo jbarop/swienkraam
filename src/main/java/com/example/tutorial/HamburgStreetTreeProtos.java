@@ -824,85 +824,85 @@ public final class HamburgStreetTreeProtos {
     int getBaumId();
 
     /**
-     * <code>required string gattung = 4;</code>
+     * <code>optional string gattung = 4;</code>
      */
     boolean hasGattung();
     /**
-     * <code>required string gattung = 4;</code>
+     * <code>optional string gattung = 4;</code>
      */
     java.lang.String getGattung();
     /**
-     * <code>required string gattung = 4;</code>
+     * <code>optional string gattung = 4;</code>
      */
     com.google.protobuf.ByteString
         getGattungBytes();
 
     /**
-     * <code>required string gattungLatein = 5;</code>
+     * <code>optional string gattungLatein = 5;</code>
      */
     boolean hasGattungLatein();
     /**
-     * <code>required string gattungLatein = 5;</code>
+     * <code>optional string gattungLatein = 5;</code>
      */
     java.lang.String getGattungLatein();
     /**
-     * <code>required string gattungLatein = 5;</code>
+     * <code>optional string gattungLatein = 5;</code>
      */
     com.google.protobuf.ByteString
         getGattungLateinBytes();
 
     /**
-     * <code>required string gattungDeutsch = 6;</code>
+     * <code>optional string gattungDeutsch = 6;</code>
      */
     boolean hasGattungDeutsch();
     /**
-     * <code>required string gattungDeutsch = 6;</code>
+     * <code>optional string gattungDeutsch = 6;</code>
      */
     java.lang.String getGattungDeutsch();
     /**
-     * <code>required string gattungDeutsch = 6;</code>
+     * <code>optional string gattungDeutsch = 6;</code>
      */
     com.google.protobuf.ByteString
         getGattungDeutschBytes();
 
     /**
-     * <code>required string art = 7;</code>
+     * <code>optional string art = 7;</code>
      */
     boolean hasArt();
     /**
-     * <code>required string art = 7;</code>
+     * <code>optional string art = 7;</code>
      */
     java.lang.String getArt();
     /**
-     * <code>required string art = 7;</code>
+     * <code>optional string art = 7;</code>
      */
     com.google.protobuf.ByteString
         getArtBytes();
 
     /**
-     * <code>required string artLatein = 8;</code>
+     * <code>optional string artLatein = 8;</code>
      */
     boolean hasArtLatein();
     /**
-     * <code>required string artLatein = 8;</code>
+     * <code>optional string artLatein = 8;</code>
      */
     java.lang.String getArtLatein();
     /**
-     * <code>required string artLatein = 8;</code>
+     * <code>optional string artLatein = 8;</code>
      */
     com.google.protobuf.ByteString
         getArtLateinBytes();
 
     /**
-     * <code>required string artDeutsch = 9;</code>
+     * <code>optional string artDeutsch = 9;</code>
      */
     boolean hasArtDeutsch();
     /**
-     * <code>required string artDeutsch = 9;</code>
+     * <code>optional string artDeutsch = 9;</code>
      */
     java.lang.String getArtDeutsch();
     /**
-     * <code>required string artDeutsch = 9;</code>
+     * <code>optional string artDeutsch = 9;</code>
      */
     com.google.protobuf.ByteString
         getArtDeutschBytes();
@@ -968,29 +968,29 @@ public final class HamburgStreetTreeProtos {
         getStammumfangzahlBytes();
 
     /**
-     * <code>required string strasse = 15;</code>
+     * <code>optional string strasse = 15;</code>
      */
     boolean hasStrasse();
     /**
-     * <code>required string strasse = 15;</code>
+     * <code>optional string strasse = 15;</code>
      */
     java.lang.String getStrasse();
     /**
-     * <code>required string strasse = 15;</code>
+     * <code>optional string strasse = 15;</code>
      */
     com.google.protobuf.ByteString
         getStrasseBytes();
 
     /**
-     * <code>required string hausnummer = 16;</code>
+     * <code>optional string hausnummer = 16;</code>
      */
     boolean hasHausnummer();
     /**
-     * <code>required string hausnummer = 16;</code>
+     * <code>optional string hausnummer = 16;</code>
      */
     java.lang.String getHausnummer();
     /**
-     * <code>required string hausnummer = 16;</code>
+     * <code>optional string hausnummer = 16;</code>
      */
     com.google.protobuf.ByteString
         getHausnummerBytes();
@@ -1005,11 +1005,11 @@ public final class HamburgStreetTreeProtos {
     int getOrtsteilNr();
 
     /**
-     * <code>required int64 stand_bearbeitung = 18;</code>
+     * <code>optional int64 stand_bearbeitung = 18;</code>
      */
     boolean hasStandBearbeitung();
     /**
-     * <code>required int64 stand_bearbeitung = 18;</code>
+     * <code>optional int64 stand_bearbeitung = 18;</code>
      */
     long getStandBearbeitung();
 
@@ -1391,13 +1391,13 @@ public final class HamburgStreetTreeProtos {
     public static final int GATTUNG_FIELD_NUMBER = 4;
     private volatile java.lang.Object gattung_;
     /**
-     * <code>required string gattung = 4;</code>
+     * <code>optional string gattung = 4;</code>
      */
     public boolean hasGattung() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>required string gattung = 4;</code>
+     * <code>optional string gattung = 4;</code>
      */
     public java.lang.String getGattung() {
       java.lang.Object ref = gattung_;
@@ -1414,7 +1414,7 @@ public final class HamburgStreetTreeProtos {
       }
     }
     /**
-     * <code>required string gattung = 4;</code>
+     * <code>optional string gattung = 4;</code>
      */
     public com.google.protobuf.ByteString
         getGattungBytes() {
@@ -1433,13 +1433,13 @@ public final class HamburgStreetTreeProtos {
     public static final int GATTUNGLATEIN_FIELD_NUMBER = 5;
     private volatile java.lang.Object gattungLatein_;
     /**
-     * <code>required string gattungLatein = 5;</code>
+     * <code>optional string gattungLatein = 5;</code>
      */
     public boolean hasGattungLatein() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>required string gattungLatein = 5;</code>
+     * <code>optional string gattungLatein = 5;</code>
      */
     public java.lang.String getGattungLatein() {
       java.lang.Object ref = gattungLatein_;
@@ -1456,7 +1456,7 @@ public final class HamburgStreetTreeProtos {
       }
     }
     /**
-     * <code>required string gattungLatein = 5;</code>
+     * <code>optional string gattungLatein = 5;</code>
      */
     public com.google.protobuf.ByteString
         getGattungLateinBytes() {
@@ -1475,13 +1475,13 @@ public final class HamburgStreetTreeProtos {
     public static final int GATTUNGDEUTSCH_FIELD_NUMBER = 6;
     private volatile java.lang.Object gattungDeutsch_;
     /**
-     * <code>required string gattungDeutsch = 6;</code>
+     * <code>optional string gattungDeutsch = 6;</code>
      */
     public boolean hasGattungDeutsch() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>required string gattungDeutsch = 6;</code>
+     * <code>optional string gattungDeutsch = 6;</code>
      */
     public java.lang.String getGattungDeutsch() {
       java.lang.Object ref = gattungDeutsch_;
@@ -1498,7 +1498,7 @@ public final class HamburgStreetTreeProtos {
       }
     }
     /**
-     * <code>required string gattungDeutsch = 6;</code>
+     * <code>optional string gattungDeutsch = 6;</code>
      */
     public com.google.protobuf.ByteString
         getGattungDeutschBytes() {
@@ -1517,13 +1517,13 @@ public final class HamburgStreetTreeProtos {
     public static final int ART_FIELD_NUMBER = 7;
     private volatile java.lang.Object art_;
     /**
-     * <code>required string art = 7;</code>
+     * <code>optional string art = 7;</code>
      */
     public boolean hasArt() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>required string art = 7;</code>
+     * <code>optional string art = 7;</code>
      */
     public java.lang.String getArt() {
       java.lang.Object ref = art_;
@@ -1540,7 +1540,7 @@ public final class HamburgStreetTreeProtos {
       }
     }
     /**
-     * <code>required string art = 7;</code>
+     * <code>optional string art = 7;</code>
      */
     public com.google.protobuf.ByteString
         getArtBytes() {
@@ -1559,13 +1559,13 @@ public final class HamburgStreetTreeProtos {
     public static final int ARTLATEIN_FIELD_NUMBER = 8;
     private volatile java.lang.Object artLatein_;
     /**
-     * <code>required string artLatein = 8;</code>
+     * <code>optional string artLatein = 8;</code>
      */
     public boolean hasArtLatein() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
-     * <code>required string artLatein = 8;</code>
+     * <code>optional string artLatein = 8;</code>
      */
     public java.lang.String getArtLatein() {
       java.lang.Object ref = artLatein_;
@@ -1582,7 +1582,7 @@ public final class HamburgStreetTreeProtos {
       }
     }
     /**
-     * <code>required string artLatein = 8;</code>
+     * <code>optional string artLatein = 8;</code>
      */
     public com.google.protobuf.ByteString
         getArtLateinBytes() {
@@ -1601,13 +1601,13 @@ public final class HamburgStreetTreeProtos {
     public static final int ARTDEUTSCH_FIELD_NUMBER = 9;
     private volatile java.lang.Object artDeutsch_;
     /**
-     * <code>required string artDeutsch = 9;</code>
+     * <code>optional string artDeutsch = 9;</code>
      */
     public boolean hasArtDeutsch() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
-     * <code>required string artDeutsch = 9;</code>
+     * <code>optional string artDeutsch = 9;</code>
      */
     public java.lang.String getArtDeutsch() {
       java.lang.Object ref = artDeutsch_;
@@ -1624,7 +1624,7 @@ public final class HamburgStreetTreeProtos {
       }
     }
     /**
-     * <code>required string artDeutsch = 9;</code>
+     * <code>optional string artDeutsch = 9;</code>
      */
     public com.google.protobuf.ByteString
         getArtDeutschBytes() {
@@ -1799,13 +1799,13 @@ public final class HamburgStreetTreeProtos {
     public static final int STRASSE_FIELD_NUMBER = 15;
     private volatile java.lang.Object strasse_;
     /**
-     * <code>required string strasse = 15;</code>
+     * <code>optional string strasse = 15;</code>
      */
     public boolean hasStrasse() {
       return ((bitField0_ & 0x00004000) == 0x00004000);
     }
     /**
-     * <code>required string strasse = 15;</code>
+     * <code>optional string strasse = 15;</code>
      */
     public java.lang.String getStrasse() {
       java.lang.Object ref = strasse_;
@@ -1822,7 +1822,7 @@ public final class HamburgStreetTreeProtos {
       }
     }
     /**
-     * <code>required string strasse = 15;</code>
+     * <code>optional string strasse = 15;</code>
      */
     public com.google.protobuf.ByteString
         getStrasseBytes() {
@@ -1841,13 +1841,13 @@ public final class HamburgStreetTreeProtos {
     public static final int HAUSNUMMER_FIELD_NUMBER = 16;
     private volatile java.lang.Object hausnummer_;
     /**
-     * <code>required string hausnummer = 16;</code>
+     * <code>optional string hausnummer = 16;</code>
      */
     public boolean hasHausnummer() {
       return ((bitField0_ & 0x00008000) == 0x00008000);
     }
     /**
-     * <code>required string hausnummer = 16;</code>
+     * <code>optional string hausnummer = 16;</code>
      */
     public java.lang.String getHausnummer() {
       java.lang.Object ref = hausnummer_;
@@ -1864,7 +1864,7 @@ public final class HamburgStreetTreeProtos {
       }
     }
     /**
-     * <code>required string hausnummer = 16;</code>
+     * <code>optional string hausnummer = 16;</code>
      */
     public com.google.protobuf.ByteString
         getHausnummerBytes() {
@@ -1898,13 +1898,13 @@ public final class HamburgStreetTreeProtos {
     public static final int STAND_BEARBEITUNG_FIELD_NUMBER = 18;
     private long standBearbeitung_;
     /**
-     * <code>required int64 stand_bearbeitung = 18;</code>
+     * <code>optional int64 stand_bearbeitung = 18;</code>
      */
     public boolean hasStandBearbeitung() {
       return ((bitField0_ & 0x00020000) == 0x00020000);
     }
     /**
-     * <code>required int64 stand_bearbeitung = 18;</code>
+     * <code>optional int64 stand_bearbeitung = 18;</code>
      */
     public long getStandBearbeitung() {
       return standBearbeitung_;
@@ -2096,30 +2096,6 @@ public final class HamburgStreetTreeProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasGattung()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasGattungLatein()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasGattungDeutsch()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasArt()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasArtLatein()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasArtDeutsch()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasPflanzjahr()) {
         memoizedIsInitialized = 0;
         return false;
@@ -2140,19 +2116,7 @@ public final class HamburgStreetTreeProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasStrasse()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasHausnummer()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasOrtsteilNr()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasStandBearbeitung()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -2991,24 +2955,6 @@ public final class HamburgStreetTreeProtos {
         if (!hasBaumId()) {
           return false;
         }
-        if (!hasGattung()) {
-          return false;
-        }
-        if (!hasGattungLatein()) {
-          return false;
-        }
-        if (!hasGattungDeutsch()) {
-          return false;
-        }
-        if (!hasArt()) {
-          return false;
-        }
-        if (!hasArtLatein()) {
-          return false;
-        }
-        if (!hasArtDeutsch()) {
-          return false;
-        }
         if (!hasPflanzjahr()) {
           return false;
         }
@@ -3024,16 +2970,7 @@ public final class HamburgStreetTreeProtos {
         if (!hasStammumfangzahl()) {
           return false;
         }
-        if (!hasStrasse()) {
-          return false;
-        }
-        if (!hasHausnummer()) {
-          return false;
-        }
         if (!hasOrtsteilNr()) {
-          return false;
-        }
-        if (!hasStandBearbeitung()) {
           return false;
         }
         if (!hasBezirk()) {
@@ -3256,13 +3193,13 @@ public final class HamburgStreetTreeProtos {
 
       private java.lang.Object gattung_ = "";
       /**
-       * <code>required string gattung = 4;</code>
+       * <code>optional string gattung = 4;</code>
        */
       public boolean hasGattung() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>required string gattung = 4;</code>
+       * <code>optional string gattung = 4;</code>
        */
       public java.lang.String getGattung() {
         java.lang.Object ref = gattung_;
@@ -3279,7 +3216,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string gattung = 4;</code>
+       * <code>optional string gattung = 4;</code>
        */
       public com.google.protobuf.ByteString
           getGattungBytes() {
@@ -3295,7 +3232,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string gattung = 4;</code>
+       * <code>optional string gattung = 4;</code>
        */
       public Builder setGattung(
           java.lang.String value) {
@@ -3308,7 +3245,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string gattung = 4;</code>
+       * <code>optional string gattung = 4;</code>
        */
       public Builder clearGattung() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -3317,7 +3254,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string gattung = 4;</code>
+       * <code>optional string gattung = 4;</code>
        */
       public Builder setGattungBytes(
           com.google.protobuf.ByteString value) {
@@ -3332,13 +3269,13 @@ public final class HamburgStreetTreeProtos {
 
       private java.lang.Object gattungLatein_ = "";
       /**
-       * <code>required string gattungLatein = 5;</code>
+       * <code>optional string gattungLatein = 5;</code>
        */
       public boolean hasGattungLatein() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>required string gattungLatein = 5;</code>
+       * <code>optional string gattungLatein = 5;</code>
        */
       public java.lang.String getGattungLatein() {
         java.lang.Object ref = gattungLatein_;
@@ -3355,7 +3292,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string gattungLatein = 5;</code>
+       * <code>optional string gattungLatein = 5;</code>
        */
       public com.google.protobuf.ByteString
           getGattungLateinBytes() {
@@ -3371,7 +3308,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string gattungLatein = 5;</code>
+       * <code>optional string gattungLatein = 5;</code>
        */
       public Builder setGattungLatein(
           java.lang.String value) {
@@ -3384,7 +3321,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string gattungLatein = 5;</code>
+       * <code>optional string gattungLatein = 5;</code>
        */
       public Builder clearGattungLatein() {
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -3393,7 +3330,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string gattungLatein = 5;</code>
+       * <code>optional string gattungLatein = 5;</code>
        */
       public Builder setGattungLateinBytes(
           com.google.protobuf.ByteString value) {
@@ -3408,13 +3345,13 @@ public final class HamburgStreetTreeProtos {
 
       private java.lang.Object gattungDeutsch_ = "";
       /**
-       * <code>required string gattungDeutsch = 6;</code>
+       * <code>optional string gattungDeutsch = 6;</code>
        */
       public boolean hasGattungDeutsch() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>required string gattungDeutsch = 6;</code>
+       * <code>optional string gattungDeutsch = 6;</code>
        */
       public java.lang.String getGattungDeutsch() {
         java.lang.Object ref = gattungDeutsch_;
@@ -3431,7 +3368,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string gattungDeutsch = 6;</code>
+       * <code>optional string gattungDeutsch = 6;</code>
        */
       public com.google.protobuf.ByteString
           getGattungDeutschBytes() {
@@ -3447,7 +3384,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string gattungDeutsch = 6;</code>
+       * <code>optional string gattungDeutsch = 6;</code>
        */
       public Builder setGattungDeutsch(
           java.lang.String value) {
@@ -3460,7 +3397,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string gattungDeutsch = 6;</code>
+       * <code>optional string gattungDeutsch = 6;</code>
        */
       public Builder clearGattungDeutsch() {
         bitField0_ = (bitField0_ & ~0x00000020);
@@ -3469,7 +3406,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string gattungDeutsch = 6;</code>
+       * <code>optional string gattungDeutsch = 6;</code>
        */
       public Builder setGattungDeutschBytes(
           com.google.protobuf.ByteString value) {
@@ -3484,13 +3421,13 @@ public final class HamburgStreetTreeProtos {
 
       private java.lang.Object art_ = "";
       /**
-       * <code>required string art = 7;</code>
+       * <code>optional string art = 7;</code>
        */
       public boolean hasArt() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>required string art = 7;</code>
+       * <code>optional string art = 7;</code>
        */
       public java.lang.String getArt() {
         java.lang.Object ref = art_;
@@ -3507,7 +3444,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string art = 7;</code>
+       * <code>optional string art = 7;</code>
        */
       public com.google.protobuf.ByteString
           getArtBytes() {
@@ -3523,7 +3460,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string art = 7;</code>
+       * <code>optional string art = 7;</code>
        */
       public Builder setArt(
           java.lang.String value) {
@@ -3536,7 +3473,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string art = 7;</code>
+       * <code>optional string art = 7;</code>
        */
       public Builder clearArt() {
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -3545,7 +3482,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string art = 7;</code>
+       * <code>optional string art = 7;</code>
        */
       public Builder setArtBytes(
           com.google.protobuf.ByteString value) {
@@ -3560,13 +3497,13 @@ public final class HamburgStreetTreeProtos {
 
       private java.lang.Object artLatein_ = "";
       /**
-       * <code>required string artLatein = 8;</code>
+       * <code>optional string artLatein = 8;</code>
        */
       public boolean hasArtLatein() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>required string artLatein = 8;</code>
+       * <code>optional string artLatein = 8;</code>
        */
       public java.lang.String getArtLatein() {
         java.lang.Object ref = artLatein_;
@@ -3583,7 +3520,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string artLatein = 8;</code>
+       * <code>optional string artLatein = 8;</code>
        */
       public com.google.protobuf.ByteString
           getArtLateinBytes() {
@@ -3599,7 +3536,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string artLatein = 8;</code>
+       * <code>optional string artLatein = 8;</code>
        */
       public Builder setArtLatein(
           java.lang.String value) {
@@ -3612,7 +3549,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string artLatein = 8;</code>
+       * <code>optional string artLatein = 8;</code>
        */
       public Builder clearArtLatein() {
         bitField0_ = (bitField0_ & ~0x00000080);
@@ -3621,7 +3558,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string artLatein = 8;</code>
+       * <code>optional string artLatein = 8;</code>
        */
       public Builder setArtLateinBytes(
           com.google.protobuf.ByteString value) {
@@ -3636,13 +3573,13 @@ public final class HamburgStreetTreeProtos {
 
       private java.lang.Object artDeutsch_ = "";
       /**
-       * <code>required string artDeutsch = 9;</code>
+       * <code>optional string artDeutsch = 9;</code>
        */
       public boolean hasArtDeutsch() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
-       * <code>required string artDeutsch = 9;</code>
+       * <code>optional string artDeutsch = 9;</code>
        */
       public java.lang.String getArtDeutsch() {
         java.lang.Object ref = artDeutsch_;
@@ -3659,7 +3596,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string artDeutsch = 9;</code>
+       * <code>optional string artDeutsch = 9;</code>
        */
       public com.google.protobuf.ByteString
           getArtDeutschBytes() {
@@ -3675,7 +3612,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string artDeutsch = 9;</code>
+       * <code>optional string artDeutsch = 9;</code>
        */
       public Builder setArtDeutsch(
           java.lang.String value) {
@@ -3688,7 +3625,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string artDeutsch = 9;</code>
+       * <code>optional string artDeutsch = 9;</code>
        */
       public Builder clearArtDeutsch() {
         bitField0_ = (bitField0_ & ~0x00000100);
@@ -3697,7 +3634,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string artDeutsch = 9;</code>
+       * <code>optional string artDeutsch = 9;</code>
        */
       public Builder setArtDeutschBytes(
           com.google.protobuf.ByteString value) {
@@ -4004,13 +3941,13 @@ public final class HamburgStreetTreeProtos {
 
       private java.lang.Object strasse_ = "";
       /**
-       * <code>required string strasse = 15;</code>
+       * <code>optional string strasse = 15;</code>
        */
       public boolean hasStrasse() {
         return ((bitField0_ & 0x00004000) == 0x00004000);
       }
       /**
-       * <code>required string strasse = 15;</code>
+       * <code>optional string strasse = 15;</code>
        */
       public java.lang.String getStrasse() {
         java.lang.Object ref = strasse_;
@@ -4027,7 +3964,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string strasse = 15;</code>
+       * <code>optional string strasse = 15;</code>
        */
       public com.google.protobuf.ByteString
           getStrasseBytes() {
@@ -4043,7 +3980,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string strasse = 15;</code>
+       * <code>optional string strasse = 15;</code>
        */
       public Builder setStrasse(
           java.lang.String value) {
@@ -4056,7 +3993,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string strasse = 15;</code>
+       * <code>optional string strasse = 15;</code>
        */
       public Builder clearStrasse() {
         bitField0_ = (bitField0_ & ~0x00004000);
@@ -4065,7 +4002,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string strasse = 15;</code>
+       * <code>optional string strasse = 15;</code>
        */
       public Builder setStrasseBytes(
           com.google.protobuf.ByteString value) {
@@ -4080,13 +4017,13 @@ public final class HamburgStreetTreeProtos {
 
       private java.lang.Object hausnummer_ = "";
       /**
-       * <code>required string hausnummer = 16;</code>
+       * <code>optional string hausnummer = 16;</code>
        */
       public boolean hasHausnummer() {
         return ((bitField0_ & 0x00008000) == 0x00008000);
       }
       /**
-       * <code>required string hausnummer = 16;</code>
+       * <code>optional string hausnummer = 16;</code>
        */
       public java.lang.String getHausnummer() {
         java.lang.Object ref = hausnummer_;
@@ -4103,7 +4040,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string hausnummer = 16;</code>
+       * <code>optional string hausnummer = 16;</code>
        */
       public com.google.protobuf.ByteString
           getHausnummerBytes() {
@@ -4119,7 +4056,7 @@ public final class HamburgStreetTreeProtos {
         }
       }
       /**
-       * <code>required string hausnummer = 16;</code>
+       * <code>optional string hausnummer = 16;</code>
        */
       public Builder setHausnummer(
           java.lang.String value) {
@@ -4132,7 +4069,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string hausnummer = 16;</code>
+       * <code>optional string hausnummer = 16;</code>
        */
       public Builder clearHausnummer() {
         bitField0_ = (bitField0_ & ~0x00008000);
@@ -4141,7 +4078,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required string hausnummer = 16;</code>
+       * <code>optional string hausnummer = 16;</code>
        */
       public Builder setHausnummerBytes(
           com.google.protobuf.ByteString value) {
@@ -4188,19 +4125,19 @@ public final class HamburgStreetTreeProtos {
 
       private long standBearbeitung_ ;
       /**
-       * <code>required int64 stand_bearbeitung = 18;</code>
+       * <code>optional int64 stand_bearbeitung = 18;</code>
        */
       public boolean hasStandBearbeitung() {
         return ((bitField0_ & 0x00020000) == 0x00020000);
       }
       /**
-       * <code>required int64 stand_bearbeitung = 18;</code>
+       * <code>optional int64 stand_bearbeitung = 18;</code>
        */
       public long getStandBearbeitung() {
         return standBearbeitung_;
       }
       /**
-       * <code>required int64 stand_bearbeitung = 18;</code>
+       * <code>optional int64 stand_bearbeitung = 18;</code>
        */
       public Builder setStandBearbeitung(long value) {
         bitField0_ |= 0x00020000;
@@ -4209,7 +4146,7 @@ public final class HamburgStreetTreeProtos {
         return this;
       }
       /**
-       * <code>required int64 stand_bearbeitung = 18;</code>
+       * <code>optional int64 stand_bearbeitung = 18;</code>
        */
       public Builder clearStandBearbeitung() {
         bitField0_ = (bitField0_ & ~0x00020000);
@@ -4593,15 +4530,15 @@ public final class HamburgStreetTreeProtos {
       "\"G\n\031HamburgStreetTreeDatabase\022*\n\005trees\030\001" +
       " \003(\0132\033.tutorial.HamburgStreetTree\"\304\003\n\021Ha" +
       "mburgStreetTree\022\r\n\005gmlId\030\001 \002(\t\022\020\n\010object" +
-      "Id\030\002 \002(\t\022\016\n\006baumId\030\003 \002(\005\022\017\n\007gattung\030\004 \002(" +
-      "\t\022\025\n\rgattungLatein\030\005 \002(\t\022\026\n\016gattungDeuts" +
-      "ch\030\006 \002(\t\022\013\n\003art\030\007 \002(\t\022\021\n\tartLatein\030\010 \002(\t" +
-      "\022\022\n\nartDeutsch\030\t \002(\t\022\022\n\npflanzjahr\030\n \002(\005" +
+      "Id\030\002 \002(\t\022\016\n\006baumId\030\003 \002(\005\022\017\n\007gattung\030\004 \001(" +
+      "\t\022\025\n\rgattungLatein\030\005 \001(\t\022\026\n\016gattungDeuts" +
+      "ch\030\006 \001(\t\022\013\n\003art\030\007 \001(\t\022\021\n\tartLatein\030\010 \001(\t" +
+      "\022\022\n\nartDeutsch\030\t \001(\t\022\022\n\npflanzjahr\030\n \002(\005" +
       "\022\031\n\021kronendurchmesser\030\013 \002(\t\022\024\n\014kronendmz" +
       "ahl\030\014 \002(\t\022\023\n\013stammumfang\030\r \002(\005\022\027\n\017stammu" +
-      "mfangzahl\030\016 \002(\t\022\017\n\007strasse\030\017 \002(\t\022\022\n\nhaus" +
-      "nummer\030\020 \002(\t\022\023\n\013ortsteil_nr\030\021 \002(\005\022\031\n\021sta" +
-      "nd_bearbeitung\030\022 \002(\003\022\016\n\006bezirk\030\023 \002(\t\022\017\n\007" +
+      "mfangzahl\030\016 \002(\t\022\017\n\007strasse\030\017 \001(\t\022\022\n\nhaus" +
+      "nummer\030\020 \001(\t\022\023\n\013ortsteil_nr\030\021 \002(\005\022\031\n\021sta" +
+      "nd_bearbeitung\030\022 \001(\003\022\016\n\006bezirk\030\023 \002(\t\022\017\n\007" +
       "srsName\030\024 \002(\t\022\024\n\014srsDimension\030\025 \002(\t\022\013\n\003p" +
       "os\030\026 \002(\tB/\n\024com.example.tutorialB\027Hambur" +
       "gStreetTreeProtos"

@@ -26,7 +26,7 @@ public class Main {
         // check that all objects match to the object version
         for (int i = 0; i < objectTrees.size(); i++) {
             if (!objectTrees.get(i).equals(byteTrees.get(i))
-                    || !objectTrees.get(i).equals(protoTrees.get(i))
+//                    || !objectTrees.get(i).equals(protoTrees.get(i))
                     || !objectTrees.get(i).equals(snappyTrees.get(i))
                     || !objectTrees.get(i).equals(lz4FastTrees.get(i))
                     || !objectTrees.get(i).equals(lz4HighTrees.get(i))) {
@@ -81,13 +81,6 @@ public class Main {
                     treeNode.set("srsDimension", pointNode.get("srsDimension"));
                     treeNode.set("pos", pointNode.get("pos"));
                     treeNode.remove("pointProperty");
-
-                    // no null support yet
-                    treeNode.fields().forEachRemaining(jsonNodeEntry -> {
-                        if (jsonNodeEntry.getValue().textValue() == null) {
-                            treeNode.put(jsonNodeEntry.getKey(), "");
-                        }
-                    });
 
                     targetList.add(xmlMapper.treeToValue(treeNode, treeClass));
                 }
