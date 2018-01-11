@@ -1,5 +1,3 @@
-import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.io.Output;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,23 +10,20 @@ import swienkraam.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
 
-    private static final String XML = "Strassenbaumkataster_2015.gml";
-//    private static final String XML = "small.xml";
+    public static void main(final String[] args) {
+        final List<HamburgStreetTree> objectTrees = loadTrees(HamburgStreetTreeObjectImpl.class);
+        final List<HamburgStreetTree> byteTrees = loadTrees(HamburgStreetTreeByteImpl.class);
+        final List<HamburgStreetTree> snappyTrees = loadTrees(HamburgStreetTreeSnappyImpl.class);
+        final List<HamburgStreetTree> lz4FastTrees = loadTrees(HamburgStreetTreeLz4FastImpl.class);
+        final List<HamburgStreetTree> lz4HighTrees = loadTrees(HamburgStreetTreeLz4HighImpl.class);
+        final List<HamburgStreetTree> protoTrees = loadTrees(HamburgStreetTreeProtobufImpl.class);
 
-    public static void main(final String[] args) throws IOException {
-        final List<HamburgStreetTree> objectTrees = loadTreesInto(HamburgStreetTreeObjectImpl.class, XML, new ArrayList<>());
-        final List<HamburgStreetTree> byteTrees = loadTreesInto(HamburgStreetTreeByteImpl.class, XML, new ArrayList<>());
-        final List<HamburgStreetTree> snappyTrees = loadTreesInto(HamburgStreetTreeSnappyImpl.class, XML, new ArrayList<>());
-        final List<HamburgStreetTree> lz4FastTrees = loadTreesInto(HamburgStreetTreeLz4FastImpl.class, XML, new ArrayList<>());
-        final List<HamburgStreetTree> lz4HighTrees = loadTreesInto(HamburgStreetTreeLz4HighImpl.class, XML, new ArrayList<>());
-//        final List<HamburgStreetTree> kryoTrees = loadTreesInto(HamburgStreetTreeKyroImpl.class, XML, new ArrayList<>());
-        final List<HamburgStreetTree> protoTrees = loadTreesInto(HamburgStreetTreeProtobufImpl.class, XML, new ArrayList<>());
-
-        // check if toString() produces the same result
+        // check that all objects match to the object version
         for (int i = 0; i < objectTrees.size(); i++) {
             if (!objectTrees.get(i).equals(byteTrees.get(i))
                     || !objectTrees.get(i).equals(protoTrees.get(i))
@@ -40,7 +35,6 @@ public class Main {
                 System.out.println(snappyTrees.get(i).toString().replace(HamburgStreetTreeSnappyImpl.class.getSimpleName(), ""));
                 System.out.println(lz4FastTrees.get(i).toString().replace(HamburgStreetTreeLz4FastImpl.class.getSimpleName(), ""));
                 System.out.println(lz4HighTrees.get(i).toString().replace(HamburgStreetTreeLz4HighImpl.class.getSimpleName(), ""));
-//                System.out.println(kryoTrees.get(i).toString().replace(HamburgStreetTreeKyroImpl.class.getSimpleName(), ""));
                 System.out.println(protoTrees.get(i).toString().replace(HamburgStreetTreeProtobufImpl.class.getSimpleName(), ""));
                 throw new RuntimeException("Byte tree impl does not match object tree impl.");
             }
@@ -51,9 +45,17 @@ public class Main {
         printSize(snappyTrees);
         printSize(lz4FastTrees);
         printSize(lz4HighTrees);
-//        printSize(kryoTrees);
         printSize(protoTrees);
 
+    }
+
+    private static List<HamburgStreetTree> loadTrees(final Class<? extends HamburgStreetTree> treeClass) {
+        final List<HamburgStreetTree> resultList = new ArrayList<>();
+        final String[] xmlFiles = {"Strassenbaumkataster_2015_1.gml", "Strassenbaumkataster_2015_2.gml",
+                "Strassenbaumkataster_2015_3.gml", "Strassenbaumkataster_2015_4.gml"};
+//        final String[] xmlFiles = {"small.xml"};
+        Arrays.stream(xmlFiles).forEach(xmlFile -> loadTreesInto(treeClass, xmlFile, resultList));
+        return resultList;
     }
 
     /**
@@ -62,35 +64,39 @@ public class Main {
      */
     private static List<HamburgStreetTree> loadTreesInto(final Class<? extends HamburgStreetTree> treeClass,
                                                          final String sourceFileName,
-                                                         final List<HamburgStreetTree> targetList) throws IOException {
-        final URL gml = Main.class.getClassLoader().getResource(sourceFileName);
-        final ObjectMapper xmlMapper = new XmlMapper()
-                .registerModule(new JavaTimeModule());
+                                                         final List<HamburgStreetTree> targetList) {
+        try {
+            final URL gml = Main.class.getClassLoader().getResource(sourceFileName);
+            final ObjectMapper xmlMapper = new XmlMapper()
+                    .registerModule(new JavaTimeModule());
 
-        // some transformations on the json tree to make annotation mapping easier
-        final MappingIterator<JsonNode> treeIterator = xmlMapper.readerFor(JsonNode.class).readValues(gml);
-        while (treeIterator.hasNext()) {
-            final JsonNode possibleTreeNode = treeIterator.next().get("strassenbaumkataster_Point");
-            if (possibleTreeNode != null && possibleTreeNode instanceof ObjectNode) {
-                final ObjectNode treeNode = (ObjectNode) possibleTreeNode;
-                final ObjectNode pointNode = (ObjectNode) treeNode.get("pointProperty").get("Point");
-                treeNode.set("srsName", pointNode.get("srsName"));
-                treeNode.set("srsDimension", pointNode.get("srsDimension"));
-                treeNode.set("pos", pointNode.get("pos"));
-                treeNode.remove("pointProperty");
+            // some transformations on the json tree to make annotation mapping easier
+            final MappingIterator<JsonNode> treeIterator = xmlMapper.readerFor(JsonNode.class).readValues(gml);
+            while (treeIterator.hasNext()) {
+                final JsonNode possibleTreeNode = treeIterator.next().get("strassenbaumkataster_Point");
+                if (possibleTreeNode != null && possibleTreeNode instanceof ObjectNode) {
+                    final ObjectNode treeNode = (ObjectNode) possibleTreeNode;
+                    final ObjectNode pointNode = (ObjectNode) treeNode.get("pointProperty").get("Point");
+                    treeNode.set("srsName", pointNode.get("srsName"));
+                    treeNode.set("srsDimension", pointNode.get("srsDimension"));
+                    treeNode.set("pos", pointNode.get("pos"));
+                    treeNode.remove("pointProperty");
 
-                // no null support yet
-                treeNode.fields().forEachRemaining(jsonNodeEntry -> {
-                    if (jsonNodeEntry.getValue().textValue() == null) {
-                        treeNode.put(jsonNodeEntry.getKey(), "");
-                    }
-                });
+                    // no null support yet
+                    treeNode.fields().forEachRemaining(jsonNodeEntry -> {
+                        if (jsonNodeEntry.getValue().textValue() == null) {
+                            treeNode.put(jsonNodeEntry.getKey(), "");
+                        }
+                    });
 
-                targetList.add(xmlMapper.treeToValue(treeNode, treeClass));
+                    targetList.add(xmlMapper.treeToValue(treeNode, treeClass));
+                }
             }
-        }
 
-        return targetList;
+            return targetList;
+        } catch (final IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private static void printSize(final List<HamburgStreetTree> trees) {

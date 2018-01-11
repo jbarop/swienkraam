@@ -39,12 +39,6 @@
             <version>0.4</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.esotericsoftware</groupId>
-            <artifactId>kryo</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-
 
         <dependency>
             <groupId>com.google.protobuf</groupId>
