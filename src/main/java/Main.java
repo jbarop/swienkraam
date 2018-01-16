@@ -22,20 +22,24 @@ public class Main {
         final List<HamburgStreetTree> lz4FastTrees = loadTrees(HamburgStreetTreeLz4FastImpl.class);
         final List<HamburgStreetTree> lz4HighTrees = loadTrees(HamburgStreetTreeLz4HighImpl.class);
         final List<HamburgStreetTree> protoTrees = loadTrees(HamburgStreetTreeProtobufImpl.class);
+        final List<HamburgStreetTree> sbeTrees = loadTrees(HamburgStreetTreeSbeImpl.class);
 
         // check that all objects match to the object version
         for (int i = 0; i < objectTrees.size(); i++) {
             if (!objectTrees.get(i).equals(byteTrees.get(i))
-//                    || !objectTrees.get(i).equals(protoTrees.get(i))
                     || !objectTrees.get(i).equals(snappyTrees.get(i))
                     || !objectTrees.get(i).equals(lz4FastTrees.get(i))
-                    || !objectTrees.get(i).equals(lz4HighTrees.get(i))) {
+                    || !objectTrees.get(i).equals(lz4HighTrees.get(i))
+                    || !objectTrees.get(i).equals(protoTrees.get(i))
+                    || !objectTrees.get(i).equals(sbeTrees.get(i))
+                    ) {
                 System.out.println(objectTrees.get(i).toString().replace(HamburgStreetTreeObjectImpl.class.getSimpleName(), ""));
                 System.out.println(byteTrees.get(i).toString().replace(HamburgStreetTreeByteImpl.class.getSimpleName(), ""));
                 System.out.println(snappyTrees.get(i).toString().replace(HamburgStreetTreeSnappyImpl.class.getSimpleName(), ""));
                 System.out.println(lz4FastTrees.get(i).toString().replace(HamburgStreetTreeLz4FastImpl.class.getSimpleName(), ""));
                 System.out.println(lz4HighTrees.get(i).toString().replace(HamburgStreetTreeLz4HighImpl.class.getSimpleName(), ""));
                 System.out.println(protoTrees.get(i).toString().replace(HamburgStreetTreeProtobufImpl.class.getSimpleName(), ""));
+                System.out.println(sbeTrees.get(i).toString().replace(HamburgStreetTreeSbeImpl.class.getSimpleName(), ""));
                 throw new RuntimeException("Byte tree impl does not match object tree impl.");
             }
         }
@@ -46,6 +50,7 @@ public class Main {
         printSize(lz4FastTrees);
         printSize(lz4HighTrees);
         printSize(protoTrees);
+        printSize(sbeTrees);
 
     }
 
@@ -81,6 +86,13 @@ public class Main {
                     treeNode.set("srsDimension", pointNode.get("srsDimension"));
                     treeNode.set("pos", pointNode.get("pos"));
                     treeNode.remove("pointProperty");
+
+                    // no null support for: proto_buf, sbe
+                    treeNode.fields().forEachRemaining(jsonNodeEntry -> {
+                        if (jsonNodeEntry.getValue().textValue() == null) {
+                            treeNode.put(jsonNodeEntry.getKey(), "");
+                        }
+                    });
 
                     targetList.add(xmlMapper.treeToValue(treeNode, treeClass));
                 }

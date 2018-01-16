@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sbe:messageSchema xmlns:sbe="http://fixprotocol.io/2016/sbe"
+                   package="swienkraam.generated.sbe"
+                   id="1"
+                   version="0"
+                   semanticVersion="5.2"
+                   description="Hamburg street tree schema"
+                   byteOrder="littleEndian">
+    <types>
+        <composite name="messageHeader" description="Message identifiers and length of message root">
+            <type name="blockLength" primitiveType="uint16"/>
+            <type name="templateId" primitiveType="uint16"/>
+            <type name="schemaId" primitiveType="uint16"/>
+            <type name="version" primitiveType="uint16"/>
+        </composite>
+        <composite name="varStringEncoding">
+            <type name="length" primitiveType="uint16" maxValue="254"/>
+            <type name="varData" primitiveType="uint8" length="0" characterEncoding="UTF-8"/>
+        </composite>
+        <composite name="varDataEncoding">
+            <type name="length" primitiveType="uint32" maxValue="1073741824"/>
+            <type name="varData" primitiveType="uint8" length="0"/>
+        </composite>
+    </types>
+    <sbe:message name="HamburgSbeTree" id="1" description="Hamburg street tree">
+        <field name="baumid" id="1" type="uint32"/>
+        <field name="pflanzjahr" id="2" type="uint16"/>
+        <field name="stammumfang" id="3" type="uint32"/>
+        <field name="ortsteilNr" id="4" type="uint16"/>
+        <field name="standBearbeitung" id="5" type="uint32"/>
+        <data name="gmlId" id="6" type="varStringEncoding"/>
+        <data name="objectId" id="7" type="varStringEncoding"/>
+        <data name="gattung" id="8" type="varStringEncoding"/>
+        <data name="gattungLatein" id="9" type="varStringEncoding"/>
+        <data name="gattungDeutsch" id="10" type="varStringEncoding"/>
+        <data name="art" id="11" type="varStringEncoding"/>
+        <data name="artLatein" id="12" type="varStringEncoding"/>
+        <data name="artDeutsch" id="13" type="varStringEncoding"/>
+        <data name="kronendurchmesser" id="14" type="varStringEncoding"/>
+        <data name="kronendmzahl" id="15" type="varStringEncoding"/>
+        <data name="stammumfangzahl" id="16" type="varStringEncoding"/>
+        <data name="strasse" id="17" type="varStringEncoding"/>
+        <data name="hausnummer" id="18" type="varStringEncoding"/>
+        <data name="bezirk" id="19" type="varStringEncoding"/>
+        <data name="srsName" id="20" type="varStringEncoding"/>
+        <data name="srsDimension" id="21" type="varStringEncoding"/>
+        <data name="pos" id="22" type="varStringEncoding"/>
+    </sbe:message>
+</sbe:messageSchema>
