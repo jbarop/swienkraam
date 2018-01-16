@@ -1,24 +1,15 @@
 package swienkraam;
 
-import com.example.tutorial.HamburgStreetTreeProtos;
 import com.google.protobuf.InvalidProtocolBufferException;
+import swienkraam.generated.protobuf.HamburgStreetTreeProtos;
 
 import java.beans.ConstructorProperties;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.time.*;
-import java.time.format.DateTimeFormatter;
 
 /**
  * Implementation of {@link HamburgStreetTree} with an byte array.
  */
 public class HamburgStreetTreeProtobufImpl extends HamburgStreetTree {
-
-    private static final Charset CHARSET = StandardCharsets.UTF_8;
-    private static final DateTimeFormatter LOCALDATE_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMdd");
-
-    private static final int NUM_DYNAMICS = 17;
-    private static final int POS_INDEX = 18;
 
     private final byte[] storage;
 

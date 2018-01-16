@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package tutorial;
 
-option java_package = "com.example.tutorial";
+option java_package = "swienkraam.generated.protobuf";
 option java_outer_classname = "HamburgStreetTreeProtos";
 
 message HamburgStreetTreeDatabase {
